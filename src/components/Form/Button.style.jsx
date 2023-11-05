@@ -6,16 +6,17 @@ export const SubmitButton = styled.button`
     width: 150px;
     height: 60px;
     padding: 5px;
-    border-radius: 20px;
     border: none;
     font-family: 'Roboto Mono', monospace;
     border: 2px solid #002c53;
     font-size: 18px;
+    border-radius: 20px;
+    transition: .5s;
     cursor: pointer;
     
     
     &:hover {
-        transition: .5s;
+        border-radius: 10px;
         color: #002c53;
         border: 2px solid #002c53;
         background-color: #f4f4f4;
