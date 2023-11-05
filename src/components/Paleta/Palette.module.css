@@ -36,6 +36,7 @@
     .color:hover {
         width: 200px;
         transition: .3s;
+        cursor: pointer;
     }    
 }
 
@@ -72,5 +73,11 @@
         border-bottom-left-radius: 15px;
         border-bottom-right-radius: 15px;
         border-top-right-radius: 0px;
+    }
+}
+
+@media (max-width: 340px) {
+    .color {
+        min-width: 300px;
     }
 }

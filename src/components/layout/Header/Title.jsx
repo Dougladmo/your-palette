@@ -9,7 +9,7 @@ export default function Title() {
 
   return (
     <div>
-        <h1 className={styles.title}>
+        <h2 className={styles.title}>
              Make your
             <span>
                 {text}
@@ -17,7 +17,7 @@ export default function Title() {
             <span> 
                 <Cursor />
             </span>
-        </h1>
+        </h2>
     </div>
   )
 }

@@ -37,3 +37,15 @@
         grid-template-columns: 1fr 1fr;
     }
 }
+
+@media (max-width: 425px) {
+    .buttons {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 350px) {
+    .buttons {
+        gap: .5rem;
+    }
+}

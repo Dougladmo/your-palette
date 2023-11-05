@@ -21,7 +21,8 @@
     width: 4rem;
 }
 
-.logo span {
+.logo h1 {
+    font-weight: 400;
     font-size: 1.8rem;
     font-family: 'Leckerli One', cursive;
 }
@@ -49,5 +50,11 @@
 
     .title {
         font-size: 28px;
+    }
+}
+
+@media (max-width: 340px) {
+    .title {
+        font-size: 22px;
     }
 }

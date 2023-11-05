@@ -12,7 +12,7 @@ export default function Header() {
       <div className={styles.header_inner}>
         <div className={styles.logo}>
           <img src={Logo} alt="logo" />
-          <span>Your palette.</span>
+          <h1>Your palette.</h1>
         </div>
         <Title />
       </div>
