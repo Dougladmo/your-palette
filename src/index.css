@@ -8,4 +8,5 @@ html,
 body,
 #root {
   background-color: #fafafa;
+  overflow-x: hidden;
 }
