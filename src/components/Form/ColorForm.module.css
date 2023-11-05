@@ -1,0 +1,46 @@
+.form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5em;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    width: 800px;
+    margin-top: 6rem;
+    border-radius: 10px;
+}
+
+.form label {
+    color: #212529;
+
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 40px;
+    letter-spacing: 6px;
+}
+
+.form input {
+    width: 60px;
+    height: 50px;
+    padding: 5px 10px;
+    border: 3px solid #212529;
+    background-color: #fff;
+}
+
+@media (max-width: 600px) {
+   .form {
+    display: flex;
+    flex-direction: column;
+   }
+   .form label {
+    font-size: 30px;
+    max-width: 340px;
+    text-align: center;
+    margin: 0 auto;
+   }
+   .form svg {
+    margin-right: 1rem;
+    font-size: 35px;
+}
+}
