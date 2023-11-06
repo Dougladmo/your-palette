@@ -10,13 +10,13 @@ export const SubmitButton = styled.button`
     font-family: 'Roboto Mono', monospace;
     border: 2px solid #002c53;
     font-size: 18px;
-    border-radius: 20px;
+    border-radius: 10px;
     transition: .5s;
     cursor: pointer;
     
     
     &:hover {
-        border-radius: 10px;
+        border-radius: 20px;
         color: #002c53;
         border: 2px solid #002c53;
         background-color: #f4f4f4;
