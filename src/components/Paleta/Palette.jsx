@@ -1,4 +1,5 @@
 import styles from './Palette.module.css'
+import { AiFillCopy } from "react-icons/ai";
 
 // eslint-disable-next-line react/prop-types
 export default function Palette({ color1, color2, color3, color4, color5 }) {
@@ -24,14 +25,13 @@ export default function Palette({ color1, color2, color3, color4, color5 }) {
     navigator.clipboard.writeText(color5)
     alert('copied to clipboard')
   }
-
   return (
     <div className={styles.paleta}>
-      <div onClick={handleColor1} style={{backgroundColor: `${color1}`}} className={styles.color}>{color1}</div>
-      <div onClick={handleColor2} style={{backgroundColor: `${color2}`}} className={styles.color}>{color2}</div>
-      <div onClick={handleColor3} style={{backgroundColor: `${color3}`}} className={styles.color}>{color3}</div>
-      <div onClick={handleColor4} style={{backgroundColor: `${color4}`}} className={styles.color}>{color4}</div>
-      <div onClick={handleColor5} style={{backgroundColor: `${color5}`}} className={styles.color}>{color5}</div>
+      <div onClick={handleColor1} style={{backgroundColor: `${color1}`}} className={styles.color}>{color1}<p><AiFillCopy/>Copiar</p></div>
+      <div onClick={handleColor2} style={{backgroundColor: `${color2}`}} className={styles.color}>{color2}<p><AiFillCopy/>Copiar</p></div>
+      <div onClick={handleColor3} style={{backgroundColor: `${color3}`}} className={styles.color}>{color3}<p><AiFillCopy/>Copiar</p></div>
+      <div onClick={handleColor4} style={{backgroundColor: `${color4}`}} className={styles.color}>{color4}<p><AiFillCopy/>Copiar</p></div>
+      <div onClick={handleColor5} style={{backgroundColor: `${color5}`}} className={styles.color}>{color5}<p><AiFillCopy/>Copiar</p></div>
     </div>
   )
 }

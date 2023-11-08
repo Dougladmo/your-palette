@@ -13,16 +13,27 @@
 
 .color {
     display: flex;
-    align-items: flex-end;
-    justify-content: center;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: center;
 
     padding-bottom: 3rem;
     
     width: 150px;
     height: 400px;
-    transition: .3s;
+    transition: .2s;
 }
 
+.color svg {
+    font-size: 1.3rem;
+    margin-top: 4rem;
+}
+.color p {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .color:first-child {
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
@@ -34,6 +45,12 @@
 }
 
 @media (min-width: 750px) {
+    .color {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: space-between;
+    }
     .color:hover {
         width: 200px;
         cursor: pointer;
@@ -49,8 +66,9 @@
     }
     .color {
         display: flex;
-        justify-content: start;
+        flex-direction: row;
         align-items: center;
+        justify-content: space-between;
 
         padding-bottom: 0px;
         padding-left: 20px;
@@ -62,6 +80,13 @@
         max-width: 400px;
         min-width: 320px;
         margin: 0 auto;
+    }
+    .color svg {
+        margin-top: 0;
+    }
+    .color p{
+        margin-right: 1.5rem;
+        font-size: 14px;
     }
     .color:first-child {
         border-top-left-radius: 15px;
@@ -78,6 +103,10 @@
 
 @media (max-width: 340px) {
     .color {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
         min-width: 300px;
     }
 }
