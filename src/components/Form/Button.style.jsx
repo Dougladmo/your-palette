@@ -12,6 +12,7 @@ export const SubmitButton = styled.button`
     font-size: 18px;
     border-radius: 10px;
     transition: .5s;
+    text-transform: capitalize;
     cursor: pointer;
     
     

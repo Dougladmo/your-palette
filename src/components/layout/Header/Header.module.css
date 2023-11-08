@@ -38,6 +38,12 @@
     color: #006bc8;
 }
 
+@media (max-width: 800px) {
+    .title {
+        font-size: 26px;
+    }
+}
+
 @media (max-width: 600px) {
     .header_inner {
         display: flex;

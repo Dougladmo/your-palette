@@ -15,21 +15,24 @@ function App() {
   const [thirdColor, setThirdColor] = useState('#8A8A8A')
   const [forthColor, setForthColor] = useState('#B8B8B8')
   const [fifthColor, setFifthColor] = useState('#E7E7E7')
+  const [mode, setMode] = useState('analogic-complement')
   const [palette, setPalette] = useState([])
 
   // function handleChange(e) {
   //   setColor(e.target.value)
   //   setColor(Color.replace('#', ''))
   // }
-
-  const getPalette = (e) => {
-    e.preventDefault()
-    let Color = e.target.color.value
-    Color = Color.replace('#', '')
-    let url = `https://www.thecolorapi.com/scheme?hex=${Color}&format=json&mode=analogic&count=5`
+  
+    function getPalette(e) {
+      e.preventDefault()
+      let Color = e.target.color.value
+      Color = Color.replace('#', '')
+      console.log(mode)
+    let url = `https://www.thecolorapi.com/scheme?hex=${Color}&format=json&modeanalogic-complement=&count=5`
+    // tipos de paleta = > Choices: monochrome monochrome-dark monochrome-light analogic complement analogic-complement triad quad
     // console.log(url)
     // console.log(Color)
-    fetch(url , {
+    fetch(url, {
       method: "GET",
       headers: {
         "Content-type": "application/json",
@@ -43,11 +46,11 @@ function App() {
         setThirdColor(palette[2].hex.value)
         setForthColor(palette[3].hex.value)
         setFifthColor(palette[4].hex.value)
-        console.log(palette)
+        // console.log(palette)
         // console.log(data)
       })
       .catch((err) => console.log(err))
-  }
+    }
 
   return (
     <div>
@@ -59,7 +62,7 @@ function App() {
             <div className='nav'>
               <h2>Generate palette</h2>
               <div className='buttons'>
-                <SubmitButton>Generate</SubmitButton>
+                <SubmitButton >Generate</SubmitButton>
               </div>
             </div>
           </form>
