@@ -8,6 +8,8 @@ import Header from './components/layout/Header/Header'
 import './app.css'
 
 import { SubmitButton } from './components/Form/Button.style'
+import Select from './components/Form/Select'
+import Footer from './components/layout/Footer/Footer'
 
 function App() {
   const [firstColor, setFirstColor] = useState('#2D2D2D')
@@ -25,13 +27,13 @@ function App() {
   
     function getPalette(e) {
       e.preventDefault()
+      // tipo de paleta
+      setMode(e.target.mode.value)
+      // cor da paleta
       let Color = e.target.color.value
       Color = Color.replace('#', '')
-      console.log(mode)
-    let url = `https://www.thecolorapi.com/scheme?hex=${Color}&format=json&modeanalogic-complement=&count=5`
-    // tipos de paleta = > Choices: monochrome monochrome-dark monochrome-light analogic complement analogic-complement triad quad
-    // console.log(url)
-    // console.log(Color)
+      // url da paleta
+    let url = `https://www.thecolorapi.com/scheme?hex=${Color}&format=json&mode=${mode}&count=5`
     fetch(url, {
       method: "GET",
       headers: {
@@ -46,7 +48,7 @@ function App() {
         setThirdColor(palette[2].hex.value)
         setForthColor(palette[3].hex.value)
         setFifthColor(palette[4].hex.value)
-        // console.log(palette)
+        // console.log(data)
         // console.log(data)
       })
       .catch((err) => console.log(err))
@@ -59,6 +61,7 @@ function App() {
           {/* componentizar form em apenas 1 componente */}
           <form action="Palette" onSubmit={getPalette}>
             <ColorForm />
+            <Select />
             <div className='nav'>
               <h2>Generate palette</h2>
               <div className='buttons'>
@@ -68,6 +71,7 @@ function App() {
           </form>
           <Palette color1={firstColor} color2={secondColor} color3={thirdColor} color4={forthColor} color5={fifthColor} /> 
         </div>
+        <Footer />
     </div>
   )
 }
