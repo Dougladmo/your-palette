@@ -23,8 +23,9 @@ export default function Select() {
           <select
             name='mode'
             id='type of palette'
+            required
           >
-            <option>Selecione uma opção</option>
+            <option disabled>Selecione uma opção</option>
             {modes.map((modes) => (
               <option value={modes} key={modes}>
                 {modes}
