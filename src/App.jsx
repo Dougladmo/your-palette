@@ -12,10 +12,10 @@ import Select from './components/Form/Select'
 import Footer from './components/layout/Footer/Footer'
 
 function App() {
-  const [firstColor, setFirstColor] = useState('#2D2D2D')
-  const [secondColor, setSecondColor] = useState('#5B5B5B')
-  const [thirdColor, setThirdColor] = useState('#8A8A8A')
-  const [forthColor, setForthColor] = useState('#B8B8B8')
+  const [firstColor, setFirstColor] = useState('#FF1D44')
+  const [secondColor, setSecondColor] = useState('#FBEBAF')
+  const [thirdColor, setThirdColor] = useState('#74BF9D')
+  const [forthColor, setForthColor] = useState('#56A292')
   const [fifthColor, setFifthColor] = useState('#E7E7E7')
   const [mode, setMode] = useState('analogic-complement')
   const [palette, setPalette] = useState([])
