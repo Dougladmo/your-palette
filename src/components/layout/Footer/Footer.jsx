@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <div className={styles.Footer}>
       <img src={Logo} alt="logo footer" />
-      <p>Your palette &copy; 2023. Made by Douglas Oliveira. </p>
+      <p>Your palette &copy; 2023.</p>
     </div>
   )
 }
