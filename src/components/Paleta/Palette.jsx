@@ -10,20 +10,24 @@ export default function Palette({ color1, color2, color3, color4, color5 }) {
     })
   }
   const handleColor2 = () => {
-    navigator.clipboard.writeText(color2)
-    alert('copied to clipboard')
+    navigator.clipboard.writeText(color2).then(() => {
+      alert('copied to clipboard')
+    })
   }
   const handleColor3 = () => {
-    navigator.clipboard.writeText(color3)
-    alert('copied to clipboard')
+    navigator.clipboard.writeText(color3).then(() => {
+      alert('copied to clipboard')
+    })
   }
   const handleColor4 = () => {
-    navigator.clipboard.writeText(color4)
-    alert('copied to clipboard')
+    navigator.clipboard.writeText(color4).then(() => {
+      alert('copied to clipboard')
+    })
   }
   const handleColor5 = () => {
-    navigator.clipboard.writeText(color5)
-    alert('copied to clipboard')
+    navigator.clipboard.writeText(color5).then(() => {
+      alert('copied to clipboard')
+    })
   }
   return (
     <div className={styles.paleta}>
